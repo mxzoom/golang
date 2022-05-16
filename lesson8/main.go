@@ -1,8 +1,8 @@
 package main
 
 import (
+	"lesson8/config"
 	"os"
-	"parser/config"
 )
 
 //
@@ -13,7 +13,8 @@ func main() {
 	os.Setenv("port", "8080")
 	os.Setenv("db_url", "postgres://db-user:db-password@petstore-db:5432/petstore?sslmode=disable")
 	os.Setenv("some_app_id", "some_id")
-	os.Setenv("some_url", "http://sentry:9000")
+	os.Setenv("some_url", "http://localhost:9000")
 
-	cfgStr.MainParse()
+	cfgStr.FlagParse()
+
 }
