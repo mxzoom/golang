@@ -66,6 +66,8 @@ func (cfg *MyConf) LoadCfgFromFile() {
 		os.Exit(2)
 	}
 
+	cfg.source = "file"
+
 }
 
 func (cfg *MyConf) ParseEnv() {
